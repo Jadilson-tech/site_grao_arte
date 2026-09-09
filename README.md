@@ -1,4 +1,4 @@
-# site_grao_arte (clique aqui)[
+# site_grao_arte [clique aqui](https://jadilson-tech.github.io/site_grao_arte/)
 ## ☕ Visão Geral
 
 O objetivo principal da aplicação é apresentar a cafeteria **Grão & Arte**, sua história, catálogo de produtos especiais, canais de contato e respostas para perguntas frequentes (FAQ). O visual busca transmitir sofisticação, acolhimento e paixão pela cultura do café.
