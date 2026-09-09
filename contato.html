@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão & Arte | Contato</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header class="topo-site">
+        <div class="logo-container">
+            <div class="logo-texto">
+                <h1>Grão & Arte</h1>
+                <span>CAFÉS ESPECIAIS</span>
+            </div>
+        </div>
+        <nav class="abas-navegacao">
+            <a href="index.html" class="aba-link">A Empresa</a>
+            <a href="produtos.html" class="aba-link">Produtos</a>
+            <a href="contato.html" class="aba-link ativa">Contato</a>
+            <a href="faq.html" class="aba-link">FAQ</a>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="secao-contato">
+            <div class="contato-info">
+                <h2>Fale Conosco</h2>
+                <p>Tem alguma dúvida sobre nossos grãos, torras ou quer fazer um pedido corporativo personalizado? Envie sua mensagem pelo formulário.</p>
+                <div class="dados-diretos">
+                    <p><strong>E-mail:</strong> contato@graoearte.com.br</p>
+                    <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                    <p><strong>Atendimento:</strong> Segunda a Sexta, das 9h às 18h</p>
+                </div>
+            </div>
+
+            <div class="contato-formulario">
+                <form id="formContato" onsubmit="validarFormulario(event)">
+                    <div class="campo-grupo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" required placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo-grupo">
+                        <label for="email">E-mail de Contato:</label>
+                        <input type="email" id="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="campo-grupo">
+                        <label for="mensagem">Sua Mensagem:</label>
+                        <textarea id="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+                </form>
+                <div id="feedbackForm" class="feedback-sucesso"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-site">
+        <p>Desenvolvido por: <strong>[Seu Nome Completo]</strong> | RA: [Seu RA] | Turma: [Sua Turma]</p>
+    </footer>
+
+    <script>
+        function validarFormulario(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value.trim();
+            const feedback = document.getElementById('feedbackForm');
+            
+            if(nome.length > 0) {
+                feedback.innerText = "Obrigado, " + nome + "! Sua mensagem foi registrada com sucesso (Simulação).";
+                feedback.style.display = "block";
+                document.getElementById('formContato').reset();
+            }
+        }
+    </script>
+</body>
+</html>
